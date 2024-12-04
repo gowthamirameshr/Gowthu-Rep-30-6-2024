@@ -1,0 +1,24 @@
+pipeline {
+    agent any 
+    stages {
+        stage('jenkins pipeline for demo') { 
+            steps {
+                   sh 'java --version'
+                   sh 'ls -l; lsblk'
+                }
+        }
+        stage('Gowthami stage') { 
+            steps {
+                    sh 'touch /tmp/pipeline.py'
+                    sh'echo "hello my jenkins world"'
+                    sh 'python3 /tmp/pipeline.py'
+            }
+        }
+        stage('pipeline') { 
+            steps {
+                sh 'echo "hi this is pipeline my stage"'
+            }
+        }
+    }
+}
+
